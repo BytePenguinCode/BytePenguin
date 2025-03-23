@@ -679,21 +679,6 @@
                 }
             });
 
-            function animateCount(id, target) {
-                let count = 0;
-                const increment = Math.ceil(target / 50);
-                const element = document.getElementById(id);
-                const interval = setInterval(() => {
-                    count += increment;
-                    if (count >= target) {
-                        element.textContent = target;
-                        clearInterval(interval);
-                    } else {
-                        element.textContent = count;
-                    }
-                }, 300);
-            }
-
             let complete = 5;
             let queue = 3;
             let target = 25;
@@ -701,44 +686,74 @@
             const targetLabel = document.getElementById("target");
             targetLabel.innerHTML = `Target: <b>${target}</b> websites by the End of 2025`;
 
-            function animateProgressBar(c, q, t) {
-                const progressCompleted =
+            const completedElement = document.getElementById("completed");
+            const queueElement = document.getElementById("queue");
+            const completedBar = document.getElementById("progress-completed");
+            const queueBar = document.getElementById("progress-queue");
+
+            function animateProgress(completedValue, queueValue, targetValue) {
+                const completedElement = document.getElementById("completed");
+                const queueElement = document.getElementById("queue");
+                const completedBar =
                     document.getElementById("progress-completed");
-                const progressQueue = document.getElementById("progress-queue");
+                const queueBar = document.getElementById("progress-queue");
 
-                let completedWidth = 0;
-                let queueWidth = 0;
+                // Calculate percentage widths for progress bars
+                let completedProgress = (completedValue / targetValue) * 100;
+                let queueProgress = (queueValue / targetValue) * 100;
 
-                let completeProgress = Math.ceil((c / t) * 100);
-                let queueProgress = Math.ceil((q / t) * 100);
+                function animate(
+                    element,
+                    bar,
+                    targetValue,
+                    targetWidth,
+                    callback
+                ) {
+                    let count = 0;
+                    let width = 0;
+                    const duration = 1000; // Total animation duration (in ms)
+                    const startTime = performance.now();
 
-                // Animate the progress for 'completed' first
-                const completedInterval = setInterval(() => {
-                    completedWidth += 0.3; // Control the speed of animation
-                    if (completedWidth >= completeProgress) {
-                        // Target completed width
-                        completedWidth = completeProgress;
-                        clearInterval(completedInterval);
+                    function step(timestamp) {
+                        let progress = (timestamp - startTime) / duration;
+                        if (progress > 1) progress = 1; // Ensure it stops at 100%
 
-                        // Once 'completed' reaches its target, start animating 'queue'
-                        const queueInterval = setInterval(() => {
-                            queueWidth += 0.3; // Control the speed of animation
-                            if (queueWidth >= queueProgress) {
-                                // Target queue width
+                        count = Math.floor(progress * targetValue);
+                        width = progress * targetWidth;
 
-                                queueWidth = queueProgress;
-                                clearInterval(queueInterval);
-                            }
-                            progressQueue.style.width = `${queueWidth}%`;
-                        }, 30);
-                        animateCount("queue", queue);
+                        element.textContent = count;
+                        bar.style.width = `${width}%`;
+
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        } else if (callback) {
+                            callback();
+                        }
                     }
-                    progressCompleted.style.width = `${completedWidth}%`;
-                }, 30);
-                animateCount("completed", complete);
+
+                    requestAnimationFrame(step);
+                }
+
+                // Animate completed progress first, then queue progress
+                animate(
+                    completedElement,
+                    completedBar,
+                    completedValue,
+                    completedProgress,
+                    () => {
+                        animate(
+                            queueElement,
+                            queueBar,
+                            queueValue,
+                            queueProgress
+                        );
+                    }
+                );
             }
 
-            animateProgressBar(complete, queue, target);
+            // Example usage
+            animateProgress(5, 3, 25);
+            animateProgress(complete, queue, target);
 
             function checkOrientation() {
                 const isMobile = /iPhone|Android/i.test(navigator.userAgent);
