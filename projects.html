@@ -169,25 +169,23 @@
                 </div>
 
                 <!-- Progress Bar -->
-                <div
-                    class="my-10 w-[95vw] max-w-5xl flex flex-col items-center"
-                >
+                <div class="my-10 w-full max-w-5xl flex flex-col items-center">
                     <div
                         class="h-6 w-full bg-gray-200 rounded-full overflow-hidden flex"
                     >
                         <div
                             id="progress-completed"
                             class="h-full bg-[#72BF78]"
-                            style="width: 16%"
+                            style="width: 0%"
                         ></div>
                         <div
                             id="progress-queue"
                             class="h-full bg-[#FFAE42]"
-                            style="width: 12%"
+                            style="width: 0%"
                         ></div>
                     </div>
-                    <p class="text-regular text-gray-700 mt-6 text-center">
-                        Target: 25 websites by end of 2025
+                    <p class="text-regular text-gray-700 mt-6 text-center" id="target">
+                        Target: number websites by end of 2025
                     </p>
                 </div>
             </section>
@@ -636,8 +634,51 @@
                 }, 50);
             }
 
-            animateCount("completed", 5);
-            animateCount("queue", 3);
+            let complete = 5;
+            let queue = 3;
+            let target = 25;
+
+            const targetLabel = document.getElementById("target");
+            targetLabel.textContent = `Target: ${target} websites by the End of 2025`
+
+            animateCount("completed", complete);
+            animateCount("queue", queue);
+
+            function animateProgressBar(c, q, t) {
+                const progressCompleted =
+                    document.getElementById("progress-completed");
+                const progressQueue = document.getElementById("progress-queue");
+
+                let completedWidth = 0;
+                let queueWidth = 0;
+
+                let completeProgress = Math.ceil((c / t) * 100);
+                let queueProgress = Math.ceil((q / t) * 100);
+
+                // Animate the progress for 'completed' first
+                const completedInterval = setInterval(() => {
+                    completedWidth += 0.3; // Control the speed of animation
+                    if (completedWidth >= completeProgress) {
+                        // Target completed width
+                        completedWidth = completeProgress;
+                        clearInterval(completedInterval);
+
+                        // Once 'completed' reaches its target, start animating 'queue'
+                        const queueInterval = setInterval(() => {
+                            queueWidth += 0.3; // Control the speed of animation
+                            if (queueWidth >= queueProgress) {
+                                // Target queue width
+                                queueWidth = queueProgress;
+                                clearInterval(queueInterval);
+                            }
+                            progressQueue.style.width = `${queueWidth}%`;
+                        }, 30);
+                    }
+                    progressCompleted.style.width = `${completedWidth}%`;
+                }, 30);
+            }
+
+            animateProgressBar(complete, queue, target);
 
             function checkOrientation() {
                 const isMobile = /iPhone|Android/i.test(navigator.userAgent);
