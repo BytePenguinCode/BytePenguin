@@ -691,7 +691,7 @@
                     } else {
                         element.textContent = count;
                     }
-                }, 50);
+                }, 300);
             }
 
             let complete = 5;
@@ -700,9 +700,6 @@
 
             const targetLabel = document.getElementById("target");
             targetLabel.innerHTML = `Target: <b>${target}</b> websites by the End of 2025`;
-
-            animateCount("completed", complete);
-            animateCount("queue", queue);
 
             function animateProgressBar(c, q, t) {
                 const progressCompleted =
@@ -728,14 +725,17 @@
                             queueWidth += 0.3; // Control the speed of animation
                             if (queueWidth >= queueProgress) {
                                 // Target queue width
+
                                 queueWidth = queueProgress;
                                 clearInterval(queueInterval);
                             }
                             progressQueue.style.width = `${queueWidth}%`;
                         }, 30);
+                        animateCount("queue", queue);
                     }
                     progressCompleted.style.width = `${completedWidth}%`;
                 }, 30);
+                animateCount("completed", complete);
             }
 
             animateProgressBar(complete, queue, target);
