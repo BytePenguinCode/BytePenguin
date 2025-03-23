@@ -685,17 +685,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-.stat-card {
-  @apply text-center p-4 text-white rounded-lg justify-items-stretch shadow-lg w-full lg:w-64;
-}
-
-.stat-title {
-  @apply text-xl font-semibold;
-}
-
-.stat-number {
-  @apply text-4xl font-bold mt-2;
-}
 
 .bg-completed {
   background-color: #72BF78;

@@ -130,9 +130,11 @@
         </div>
 
         <main
-            class="relative pt-14 min-md:pt-24 bg-slate-50 min-h-screen mx-auto px-6 w-screen flex flex-col justify-center items-center"
+            class="relative pt-14 md:pt-24 bg-slate-50 min-h-screen mx-auto px-6 flex flex-col justify-center items-center"
         >
-            <section class="pt-16 pb-12 md:pb-16 mx-auto px-0">
+            <section
+                class="pt-16 pb-12 md:pb-16 mx-auto px-0 flex flex-col items-center w-full"
+            >
                 <div class="container flex justify-center w-full items-center">
                     <h1
                         class="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12"
@@ -140,41 +142,59 @@
                         Projects
                     </h1>
                 </div>
+
+                <div class="flex justify-center items-center w-full">
+                    <div
+                        class="flex flex-col items-center space-y-6 md:px-4 lg:flex-row lg:space-x-6 lg:space-y-0 w-full max-w-4xl justify-center"
+                    >
+                        <div
+                            class="text-center p-4 bg-[#72BF78] text-white rounded-lg shadow-lg w-full flex flex-col items-center justify-center"
+                        >
+                            <h3 class="text-xl font-semibold">
+                                Websites Completed
+                            </h3>
+                            <p id="completed" class="text-4xl font-bold mt-2">
+                                0
+                            </p>
+                        </div>
+                        <div
+                            class="text-center p-4 bg-[#FFAE42] text-white rounded-lg shadow-lg w-full flex flex-col items-center justify-center"
+                        >
+                            <h3 class="text-xl font-semibold">
+                                Websites Being Built
+                            </h3>
+                            <p id="queue" class="text-4xl font-bold mt-2">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
                 <div
-                    class="flex flex-col justify-items-stretch space-y-6 md:px-4 lg:flex-row lg:space-x-6 lg:justify-stretch lg:space-y-0 w-full lg:px-auto"
+                    class="my-10 w-[95vw] max-w-5xl flex flex-col items-center"
                 >
                     <div
-                        class="text-center p-4 bg-[#72BF78] text-white rounded-lg justify-items-stretch shadow-lg w-full lg:w-64"
+                        class="h-6 w-full bg-gray-200 rounded-full overflow-hidden flex"
                     >
-                        <h3 class="text-xl font-semibold">
-                            Websites Completed
-                        </h3>
-                        <p id="completed" class="text-4xl font-bold mt-2">0</p>
+                        <div
+                            id="progress-completed"
+                            class="h-full bg-[#72BF78]"
+                            style="width: 16%"
+                        ></div>
+                        <div
+                            id="progress-queue"
+                            class="h-full bg-[#FFAE42]"
+                            style="width: 12%"
+                        ></div>
                     </div>
-                    <div
-                        class="text-center p-4 bg-[#FFAE42] text-white rounded-lg justify-items-stretch shadow-lg w-full lg:w-64"
-                    >
-                        <h3 class="text-xl font-semibold">
-                            Websites Being Built
-                        </h3>
-                        <p id="queue" class="text-4xl font-bold mt-2">0</p>
-                    </div>
+                    <p class="text-regular text-gray-700 mt-6 text-center">
+                        Target: 25 websites by end of 2025
+                    </p>
                 </div>
             </section>
 
-              <!-- Progress Bar -->
-            <div class="w-full px-4 mb-10">
-                <div class="h-6 w-full bg-gray-200 rounded-full overflow-hidden flex">
-                <div id="progress-completed" class="h-full bg-[#72BF78]" style="width: 16%"></div>
-                <div id="progress-queue" class="h-full bg-[#FFAE42]" style="width: 12%"></div>
-                </div>
-                <p class="text-sm text-gray-700 mt-2 text-center">Target: 25 websites by end of 2025</p>
-            </div>
-            </section>
-            <br>
             <!-- Full-width Gallery Grid -->
             <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full lg:px-4 pb-10 mx-auto"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full lg:px-4 pb-10 mx-auto w-full"
             >
                 <div
                     class="relative w-full aspect-[3/4] md:aspect-[7/8] lg:aspect-square rounded-xl overflow-hidden shadow-lg group flex flex-col"
@@ -616,7 +636,7 @@
                 }, 50);
             }
 
-            animateCount("completed", 4);
+            animateCount("completed", 5);
             animateCount("queue", 3);
 
             function checkOrientation() {
