@@ -128,492 +128,302 @@
                 >Projects</a
             >
         </div>
+<main
+  class="relative pt-12 md:pt-20 bg-slate-50 min-h-screen mx-auto px-6 flex flex-col justify-start items-center pb-40"
+>
+  <!-- ===== DASHBOARD SUMMARY ===== -->
+  <section class="pt-12 pb-10 md:pb-14 w-full flex flex-col items-center">
+    <div class="container flex justify-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-10">
+        Projects
+      </h1>
+    </div>
 
-        <main
-            class="relative pt-14 md:pt-24 bg-slate-50 min-h-screen mx-auto px-6 flex flex-col justify-center items-center"
+    <div class="flex justify-center w-full">
+      <div
+        class="flex flex-col items-center space-y-6 md:px-4 lg:flex-row lg:space-x-6 lg:space-y-0 w-full max-w-4xl justify-center"
+      >
+        <div
+          class="text-center p-4 bg-completed text-white rounded-lg shadow-lg w-full flex flex-col items-center justify-center"
         >
-            <section
-                class="pt-16 pb-12 md:pb-16 mx-auto px-0 flex flex-col items-center w-full"
-            >
-                <div class="container flex justify-center w-full items-center">
-                    <h1
-                        class="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12"
-                    >
-                        Projects
-                    </h1>
-                </div>
-
-                <div class="flex justify-center items-center w-full">
-                    <div
-                        class="flex flex-col items-center space-y-6 md:px-4 lg:flex-row lg:space-x-6 lg:space-y-0 w-full max-w-4xl justify-center"
-                    >
-                        <div
-                            class="text-center p-4 bg-[#72BF78] text-white rounded-lg shadow-lg w-full flex flex-col items-center justify-center"
-                        >
-                            <h3 class="text-xl font-semibold">
-                                Websites Completed
-                            </h3>
-                            <p id="completed" class="text-4xl font-bold mt-2">
-                                0
-                            </p>
-                        </div>
-                        <div
-                            class="text-center p-4 bg-[#FFAE42] text-white rounded-lg shadow-lg w-full flex flex-col items-center justify-center"
-                        >
-                            <h3 class="text-xl font-semibold">
-                                Websites Being Built
-                            </h3>
-                            <p id="queue" class="text-4xl font-bold mt-2">0</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Progress Bar -->
-                <div class="my-10 w-full max-w-5xl flex flex-col items-center">
-                    <div
-                        class="h-6 w-full bg-gray-200 rounded-full overflow-hidden flex"
-                    >
-                        <div
-                            id="progress-completed"
-                            class="h-full bg-[#72BF78]"
-                            style="width: 0%"
-                        ></div>
-                        <div
-                            id="progress-queue"
-                            class="h-full bg-[#FFAE42]"
-                            style="width: 0%"
-                        ></div>
-                    </div>
-                    <p
-                        class="text-regular text-gray-700 mt-6 text-center"
-                        id="target"
-                    >
-                        Target: <b>number</b> websites by end of 2025
-                    </p>
-                </div>
-            </section>
-
-            <!-- Full-width Gallery Grid -->
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full lg:px-4 pb-10 mx-auto w-full"
-            >
-
-                <!-- Bukit Gombak Eagles Interact Club Card -->
-    <div class="relative w-full aspect-[3/4] md:aspect-[7/8] lg:aspect-square rounded-xl overflow-hidden shadow-lg group flex flex-col">
-        <a href="https://eaglesinteract.vercel.app/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/eaglesinteract.png" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-125 group-touch-pinch-zoom:scale-125" />
-        </a>
-        <div class="absolute bottom-0 w-full bg-gray-900/50 backdrop-blur-md flex flex-col items-start justify-between p-4 sm:p-6 space-y-3 min-h-[55%]">
-            <div class="space-y-2 sm:space-y-3">
-                <h2 class="text-white text-lg lg:text-xl font-bold">
-                    Bukit Gombak Eagles Interact Club
-                </h2>
-                <p class="text-white text-sm font-semibold">
-                    Work in Progress
-                </p>
-                <p class="text-white text-sm">
-                    Bukit Gombak Eagles Interact Club (BGEIC) empowers youths to serve the community through flexible, ad-hoc participation in club activities.
-                </p>
-                <p class="text-white text-sm font-semibold">
-                    📍 Singapore
-                </p>
-            </div>
-            <div class="flex flex-col md:flex-row items-start md:items-start md:justify-start space-y-2 md:space-y-0 md:space-x-3 mt-2">
-                <!-- Website Link -->
-                <a href="https://eaglesinteract.vercel.app/" target="_blank" rel="noopener noreferrer" class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.63605 5.63605C7.19815 4.07395 9.73081 4.07395 11.2929 5.63605L14.1213 8.46448C15.6834 10.0266 15.6834 12.5592 14.1213 14.1213C13.7308 14.5119 13.0976 14.5119 12.7071 14.1213C12.3166 13.7308 12.3166 13.0976 12.7071 12.7071C13.4882 11.9261 13.4882 10.6597 12.7071 9.87869L9.87869 7.05026C9.09764 6.26922 7.83131 6.26922 7.05026 7.05026C6.26922 7.83131 6.26922 9.09764 7.05026 9.87869L7.75737 10.5858C8.1479 10.9763 8.14789 11.6095 7.75737 12C7.36685 12.3905 6.73368 12.3905 6.34316 12L5.63605 11.2929C4.07395 9.73081 4.07395 7.19815 5.63605 5.63605ZM11.2929 9.8787C11.6834 10.2692 11.6834 10.9024 11.2929 11.2929C10.5119 12.074 10.5119 13.3403 11.2929 14.1213L14.1213 16.9498C14.9024 17.7308 16.1687 17.7308 16.9498 16.9498C17.7308 16.1687 17.7308 14.9024 16.9498 14.1213L16.2427 13.4142C15.8521 13.0237 15.8521 12.3905 16.2427 12C16.6332 11.6095 17.2663 11.6095 17.6569 12L18.364 12.7071C19.9261 14.2692 19.9261 16.8019 18.364 18.364C16.8019 19.9261 14.2692 19.9261 12.7071 18.364L9.8787 15.5356C8.3166 13.9735 8.3166 11.4408 9.8787 9.8787C10.2692 9.48817 10.9024 9.48817 11.2929 9.8787Z" fill="black"/>
-                    </svg>
-                    <span>Website</span>
-                </a>
-
-                <!-- Instagram Link -->
-                <a href="https://www.instagram.com/eagles_interact/" target="_blank" rel="noopener noreferrer" class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="black" stroke-width="4" viewBox="0 0 256 256" class="w-5 h-5">
-                        <path fill="black" stroke="black" stroke-width="4" fill-rule="evenodd" clip-rule="evenodd" d="M128,84a44,44,0,1,0,44,44A44.04978,44.04978,0,0,0,128,84Zm0,80a36,36,0,1,1,36-36A36.04061,36.04061,0,0,1,128,164ZM172,32H84A52.059,52.059,0,0,0,32,84v88a52.059,52.059,0,0,0,52,52h88a52.059,52.059,0,0,0,52-52V84A52.059,52.059,0,0,0,172,32Zm44,140a44.04978,44.04978,0,0,1-44,44H84a44.04978,44.04978,0,0,1-44-44V84A44.04978,44.04978,0,0,1,84,40h88a44.04978,44.04978,0,0,1,44,44ZM188,76a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,188,76Z"/>
-                    </svg>
-                    <span>Instagram</span>
-                </a>
-            </div>
+          <h3 class="text-xl font-semibold">Websites&nbsp;Completed</h3>
+          <p id="completed" class="text-4xl font-bold mt-2">0</p>
         </div>
+
+        <div
+          class="text-center p-4 bg-queue text-white rounded-lg shadow-lg w-full flex flex-col items-center justify-center"
+        >
+          <h3 class="text-xl font-semibold">Websites&nbsp;Being&nbsp;Built</h3>
+          <p id="queue" class="text-4xl font-bold mt-2">0</p>
+        </div>
+      </div>
     </div>
-                
-                <div
-                    class="relative w-full aspect-[3/4] md:aspect-[7/8] lg:aspect-square rounded-xl overflow-hidden shadow-lg group flex flex-col"
-                >
-                    <a
-                        href="https://thebetteringbranch.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            src="/images/thebetteringbranch.png"
-                            class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-125 group-touch-pinch-zoom:scale-125"
-                        />
-                    </a>
-                    <div
-                        class="absolute bottom-0 w-full bg-gray-900/50 backdrop-blur-md flex flex-col items-start justify-between p-4 sm:p-6 space-y-3 min-h-[55%]"
-                    >
-                        <div class="space-y-2 sm:space-y-3">
-                            <h2 class="text-white text-lg lg:text-xl font-bold">
-                                The Bettering Branch
-                            </h2>
-                            <p class="text-white text-sm">
-                                A youth-founded, student-initiated volunteering
-                                organisation, that hopes to help better
-                                Singapore, one branch at a time, by empowering
-                                youths to give back to society.
-                            </p>
-                            <p class="text-white text-sm font-semibold">
-                                📍 Singapore
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col md:flex-row items-start md:items-start md:justify-start space-y-2 md:space-y-0 md:space-x-3 mt-2"
-                        >
-                            <!-- Website Link -->
-                            <a
-                                href="https://thebetteringbranch.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="w-5 h-5"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M5.63605 5.63605C7.19815 4.07395 9.73081 4.07395 11.2929 5.63605L14.1213 8.46448C15.6834 10.0266 15.6834 12.5592 14.1213 14.1213C13.7308 14.5119 13.0976 14.5119 12.7071 14.1213C12.3166 13.7308 12.3166 13.0976 12.7071 12.7071C13.4882 11.9261 13.4882 10.6597 12.7071 9.87869L9.87869 7.05026C9.09764 6.26922 7.83131 6.26922 7.05026 7.05026C6.26922 7.83131 6.26922 9.09764 7.05026 9.87869L7.75737 10.5858C8.1479 10.9763 8.14789 11.6095 7.75737 12C7.36685 12.3905 6.73368 12.3905 6.34316 12L5.63605 11.2929C4.07395 9.73081 4.07395 7.19815 5.63605 5.63605ZM11.2929 9.8787C11.6834 10.2692 11.6834 10.9024 11.2929 11.2929C10.5119 12.074 10.5119 13.3403 11.2929 14.1213L14.1213 16.9498C14.9024 17.7308 16.1687 17.7308 16.9498 16.9498C17.7308 16.1687 17.7308 14.9024 16.9498 14.1213L16.2427 13.4142C15.8521 13.0237 15.8521 12.3905 16.2427 12C16.6332 11.6095 17.2663 11.6095 17.6569 12L18.364 12.7071C19.9261 14.2692 19.9261 16.8019 18.364 18.364C16.8019 19.9261 14.2692 19.9261 12.7071 18.364L9.8787 15.5356C8.3166 13.9735 8.3166 11.4408 9.8787 9.8787C10.2692 9.48817 10.9024 9.48817 11.2929 9.8787Z"
-                                        fill="black"
-                                    />
-                                </svg>
-                                <span>Website</span>
-                            </a>
 
-                            <!-- Instagram Link -->
-                            <a
-                                href="https://www.instagram.com/thebetteringbranch/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    stroke="black"
-                                    stroke-width="4"
-                                    viewBox="0 0 256 256"
-                                    class="w-5 h-5"
-                                >
-                                    <path
-                                        fill="black"
-                                        stroke="black"
-                                        stroke-width="4"
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M128,84a44,44,0,1,0,44,44A44.04978,44.04978,0,0,0,128,84Zm0,80a36,36,0,1,1,36-36A36.04061,36.04061,0,0,1,128,164ZM172,32H84A52.059,52.059,0,0,0,32,84v88a52.059,52.059,0,0,0,52,52h88a52.059,52.059,0,0,0,52-52V84A52.059,52.059,0,0,0,172,32Zm44,140a44.04978,44.04978,0,0,1-44,44H84a44.04978,44.04978,0,0,1-44-44V84A44.04978,44.04978,0,0,1,84,40h88a44.04978,44.04978,0,0,1,44,44ZM188,76a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,188,76Z"
-                                    />
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="relative w-full aspect-[3/4] md:aspect-[7/8] lg:aspect-square rounded-xl overflow-hidden shadow-lg group flex flex-col"
-                >
-                    <a
-                        href="https://aetherismagazine.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            src="/images/aetherismagazine.jpg"
-                            class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-125 group-touch-pinch-zoom:scale-125"
-                        />
-                    </a>
-                    <div
-                        class="absolute bottom-0 w-full bg-gray-900/50 backdrop-blur-md flex flex-col items-start justify-between p-4 sm:p-6 space-y-3 min-h-[55%]"
-                    >
-                        <div class="space-y-2 sm:space-y-3">
-                            <h2 class="text-white text-lg lg:text-xl font-bold">
-                                Aetheris Magazine
-                            </h2>
-                            <p class="text-white text-sm">
-                                A student-led science magazine inspiring passion
-                                in Science, Technology, Engineering and
-                                Mathematics (STEM).
-                            </p>
-                            <p class="text-white text-sm font-semibold">
-                                📍 India & USA
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col md:flex-row items-start md:items-start md:justify-start space-y-2 md:space-y-0 md:space-x-3 mt-2"
-                        >
-                            <!-- Website Link -->
-                            <a
-                                href="https://aetherismagazine.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="w-5 h-5"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M5.63605 5.63605C7.19815 4.07395 9.73081 4.07395 11.2929 5.63605L14.1213 8.46448C15.6834 10.0266 15.6834 12.5592 14.1213 14.1213C13.7308 14.5119 13.0976 14.5119 12.7071 14.1213C12.3166 13.7308 12.3166 13.0976 12.7071 12.7071C13.4882 11.9261 13.4882 10.6597 12.7071 9.87869L9.87869 7.05026C9.09764 6.26922 7.83131 6.26922 7.05026 7.05026C6.26922 7.83131 6.26922 9.09764 7.05026 9.87869L7.75737 10.5858C8.1479 10.9763 8.14789 11.6095 7.75737 12C7.36685 12.3905 6.73368 12.3905 6.34316 12L5.63605 11.2929C4.07395 9.73081 4.07395 7.19815 5.63605 5.63605ZM11.2929 9.8787C11.6834 10.2692 11.6834 10.9024 11.2929 11.2929C10.5119 12.074 10.5119 13.3403 11.2929 14.1213L14.1213 16.9498C14.9024 17.7308 16.1687 17.7308 16.9498 16.9498C17.7308 16.1687 17.7308 14.9024 16.9498 14.1213L16.2427 13.4142C15.8521 13.0237 15.8521 12.3905 16.2427 12C16.6332 11.6095 17.2663 11.6095 17.6569 12L18.364 12.7071C19.9261 14.2692 19.9261 16.8019 18.364 18.364C16.8019 19.9261 14.2692 19.9261 12.7071 18.364L9.8787 15.5356C8.3166 13.9735 8.3166 11.4408 9.8787 9.8787C10.2692 9.48817 10.9024 9.48817 11.2929 9.8787Z"
-                                        fill="black"
-                                    />
-                                </svg>
-                                <span>Website</span>
-                            </a>
-
-                            <!-- Instagram Link -->
-                            <a
-                                href="https://www.instagram.com/aetherismagazine/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    stroke="black"
-                                    stroke-width="4"
-                                    viewBox="0 0 256 256"
-                                    class="w-5 h-5"
-                                >
-                                    <path
-                                        fill="black"
-                                        stroke="black"
-                                        stroke-width="4"
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M128,84a44,44,0,1,0,44,44A44.04978,44.04978,0,0,0,128,84Zm0,80a36,36,0,1,1,36-36A36.04061,36.04061,0,0,1,128,164ZM172,32H84A52.059,52.059,0,0,0,32,84v88a52.059,52.059,0,0,0,52,52h88a52.059,52.059,0,0,0,52-52V84A52.059,52.059,0,0,0,172,32Zm44,140a44.04978,44.04978,0,0,1-44,44H84a44.04978,44.04978,0,0,1-44-44V84A44.04978,44.04978,0,0,1,84,40h88a44.04978,44.04978,0,0,1,44,44ZM188,76a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,188,76Z"
-                                    />
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="relative w-full aspect-[3/4] md:aspect-[7/8] lg:aspect-square rounded-xl overflow-hidden shadow-lg group flex flex-col"
-                >
-                    <a
-                        href="https://mind4matter.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            src="/images/mind4matter.jpg"
-                            class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-125 group-touch-pinch-zoom:scale-125"
-                        />
-                    </a>
-                    <div
-                        class="absolute bottom-0 w-full bg-gray-900/50 backdrop-blur-md flex flex-col items-start justify-between p-4 sm:p-6 space-y-3 min-h-[55%]"
-                    >
-                        <div class="space-y-2 sm:space-y-3">
-                            <h2 class="text-white text-lg lg:text-xl font-bold">
-                                Mind4Matter
-                            </h2>
-                            <p class="text-white text-sm">
-                                A youth-led nonprofit organisation that aims to
-                                help families facing mental health issues.
-                            </p>
-                            <p class="text-white text-sm font-semibold">
-                                📍 USA
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col md:flex-row items-start md:items-start md:justify-start space-y-2 md:space-y-0 md:space-x-3 mt-2"
-                        >
-                            <!-- Website Link -->
-                            <a
-                                href="https://mind4matter.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="w-5 h-5"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M5.63605 5.63605C7.19815 4.07395 9.73081 4.07395 11.2929 5.63605L14.1213 8.46448C15.6834 10.0266 15.6834 12.5592 14.1213 14.1213C13.7308 14.5119 13.0976 14.5119 12.7071 14.1213C12.3166 13.7308 12.3166 13.0976 12.7071 12.7071C13.4882 11.9261 13.4882 10.6597 12.7071 9.87869L9.87869 7.05026C9.09764 6.26922 7.83131 6.26922 7.05026 7.05026C6.26922 7.83131 6.26922 9.09764 7.05026 9.87869L7.75737 10.5858C8.1479 10.9763 8.14789 11.6095 7.75737 12C7.36685 12.3905 6.73368 12.3905 6.34316 12L5.63605 11.2929C4.07395 9.73081 4.07395 7.19815 5.63605 5.63605ZM11.2929 9.8787C11.6834 10.2692 11.6834 10.9024 11.2929 11.2929C10.5119 12.074 10.5119 13.3403 11.2929 14.1213L14.1213 16.9498C14.9024 17.7308 16.1687 17.7308 16.9498 16.9498C17.7308 16.1687 17.7308 14.9024 16.9498 14.1213L16.2427 13.4142C15.8521 13.0237 15.8521 12.3905 16.2427 12C16.6332 11.6095 17.2663 11.6095 17.6569 12L18.364 12.7071C19.9261 14.2692 19.9261 16.8019 18.364 18.364C16.8019 19.9261 14.2692 19.9261 12.7071 18.364L9.8787 15.5356C8.3166 13.9735 8.3166 11.4408 9.8787 9.8787C10.2692 9.48817 10.9024 9.48817 11.2929 9.8787Z"
-                                        fill="black"
-                                    />
-                                </svg>
-                                <span>Website</span>
-                            </a>
-
-                            <!-- Instagram Link -->
-                            <a
-                                href="https://www.instagram.com/mind4matter.global"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    stroke="black"
-                                    stroke-width="4"
-                                    viewBox="0 0 256 256"
-                                    class="w-5 h-5"
-                                >
-                                    <path
-                                        fill="black"
-                                        stroke="black"
-                                        stroke-width="4"
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M128,84a44,44,0,1,0,44,44A44.04978,44.04978,0,0,0,128,84Zm0,80a36,36,0,1,1,36-36A36.04061,36.04061,0,0,1,128,164ZM172,32H84A52.059,52.059,0,0,0,32,84v88a52.059,52.059,0,0,0,52,52h88a52.059,52.059,0,0,0,52-52V84A52.059,52.059,0,0,0,172,32Zm44,140a44.04978,44.04978,0,0,1-44,44H84a44.04978,44.04978,0,0,1-44-44V84A44.04978,44.04978,0,0,1,84,40h88a44.04978,44.04978,0,0,1,44,44ZM188,76a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,188,76Z"
-                                    />
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-<!-- The Bettering Run Card -->
-<div class="relative w-full aspect-[3/4] md:aspect-[7/8] lg:aspect-square rounded-xl overflow-hidden shadow-lg group flex flex-col">
-    <a href="https://thebetteringrun.vercel.app/" target="_blank" rel="noopener noreferrer">
-        <img
-            src="/images/betteringrun.jpg"
-            class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-125 group-touch-pinch-zoom:scale-125"
-        />
-    </a>
-    <div class="absolute bottom-0 w-full bg-gray-900/50 backdrop-blur-md flex flex-col items-start justify-between p-4 sm:p-6 space-y-3 min-h-[55%]">
-        <div class="space-y-2 sm:space-y-3">
-            <h2 class="text-white text-lg md:text-xl font-bold">
-                The Bettering Run
-            </h2>
-            <p class="text-white text-sm">
-                A 3.5 KM run in support of health & sustainability.<br />We developed a site for the post-run carnival.
-            </p>
-            <p class="text-white text-sm font-semibold">
-                📍 Singapore
-            </p>
-        </div>
-        <div class="flex flex-col md:flex-row items-start md:items-start md:justify-start space-y-2 md:space-y-0 md:space-x-3 mt-2">
-            <!-- Website Link -->
-            <a
-                href="https://thebetteringrun.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.63605 5.63605C7.19815 4.07395 9.73081 4.07395 11.2929 5.63605L14.1213 8.46448C15.6834 10.0266 15.6834 12.5592 14.1213 14.1213C13.7308 14.5119 13.0976 14.5119 12.7071 14.1213C12.3166 13.7308 12.3166 13.0976 12.7071 12.7071C13.4882 11.9261 13.4882 10.6597 12.7071 9.87869L9.87869 7.05026C9.09764 6.26922 7.83131 6.26922 7.05026 7.05026C6.26922 7.83131 6.26922 9.09764 7.05026 9.87869L7.75737 10.5858C8.1479 10.9763 8.14789 11.6095 7.75737 12C7.36685 12.3905 6.73368 12.3905 6.34316 12L5.63605 11.2929C4.07395 9.73081 4.07395 7.19815 5.63605 5.63605ZM11.2929 9.8787C11.6834 10.2692 11.6834 10.9024 11.2929 11.2929C10.5119 12.074 10.5119 13.3403 11.2929 14.1213L14.1213 16.9498C14.9024 17.7308 16.1687 17.7308 16.9498 16.9498C17.7308 16.1687 17.7308 14.9024 16.9498 14.1213L16.2427 13.4142C15.8521 13.0237 15.8521 12.3905 16.2427 12C16.6332 11.6095 17.2663 11.6095 17.6569 12L18.364 12.7071C19.9261 14.2692 19.9261 16.8019 18.364 18.364C16.8019 19.9261 14.2692 19.9261 12.7071 18.364L9.8787 15.5356C8.3166 13.9735 8.3166 11.4408 9.8787 9.8787C10.2692 9.48817 10.9024 9.48817 11.2929 9.8787Z" fill="black" />
-                </svg>
-                <span>Website</span>
-            </a>
-        </div>
+    <!-- Progress bar -->
+    <div class="my-8 w-full max-w-5xl flex flex-col items-center">
+      <div class="h-6 w-full bg-gray-200 rounded-full overflow-hidden flex">
+        <div id="progress-completed" class="h-full bg-completed" style="width:0%"></div>
+        <div id="progress-queue" class="h-full bg-queue" style="width:0%"></div>
+      </div>
+      <p class="text-gray-700 mt-6 text-center" id="target">
+        Target: <b>number</b> websites by end&nbsp;of&nbsp;2025
+      </p>
     </div>
-</div>
-                <div
-                    class="relative w-full aspect-[3/4] md:aspect-[7/8] lg:aspect-square rounded-xl overflow-hidden shadow-lg group flex flex-col"
-                >
-                    <a
-                        href="https://projectlighthouse.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            src="/images/project-lighthouse.png"
-                            class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-125 group-touch-pinch-zoom:scale-125"
-                        />
-                    </a>
-                    <div
-                        class="absolute bottom-0 w-full bg-gray-900/50 backdrop-blur-md flex flex-col items-start justify-between p-4 sm:p-6 space-y-3 min-h-[55%]"
-                    >
-                        <div class="space-y-2 sm:space-y-3">
-                            <h2 class="text-white text-lg md:text-xl font-bold">
-                                Project Lighthouse
-                            </h2>
-                            <p class="text-white text-sm">
-                                A group of ACJC students and graduates who want
-                                to shine a light into the lives of residents
-                                living alone.
-                            </p>
-                            <p class="text-white text-sm font-semibold">
-                                📍 Singapore
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col md:flex-row items-start md:items-start md:justify-start space-y-2 md:space-y-0 md:space-x-3 mt-2"
-                        >
-                            <!-- Website Link -->
-                            <a
-                                href="https://projectlighthouse.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="w-5 h-5"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M5.63605 5.63605C7.19815 4.07395 9.73081 4.07395 11.2929 5.63605L14.1213 8.46448C15.6834 10.0266 15.6834 12.5592 14.1213 14.1213C13.7308 14.5119 13.0976 14.5119 12.7071 14.1213C12.3166 13.7308 12.3166 13.0976 12.7071 12.7071C13.4882 11.9261 13.4882 10.6597 12.7071 9.87869L9.87869 7.05026C9.09764 6.26922 7.83131 6.26922 7.05026 7.05026C6.26922 7.83131 6.26922 9.09764 7.05026 9.87869L7.75737 10.5858C8.1479 10.9763 8.14789 11.6095 7.75737 12C7.36685 12.3905 6.73368 12.3905 6.34316 12L5.63605 11.2929C4.07395 9.73081 4.07395 7.19815 5.63605 5.63605ZM11.2929 9.8787C11.6834 10.2692 11.6834 10.9024 11.2929 11.2929C10.5119 12.074 10.5119 13.3403 11.2929 14.1213L14.1213 16.9498C14.9024 17.7308 16.1687 17.7308 16.9498 16.9498C17.7308 16.1687 17.7308 14.9024 16.9498 14.1213L16.2427 13.4142C15.8521 13.0237 15.8521 12.3905 16.2427 12C16.6332 11.6095 17.2663 11.6095 17.6569 12L18.364 12.7071C19.9261 14.2692 19.9261 16.8019 18.364 18.364C16.8019 19.9261 14.2692 19.9261 12.7071 18.364L9.8787 15.5356C8.3166 13.9735 8.3166 11.4408 9.8787 9.8787C10.2692 9.48817 10.9024 9.48817 11.2929 9.8787Z"
-                                        fill="black"
-                                    />
-                                </svg>
-                                <span>Website</span>
-                            </a>
+  </section>
 
-                            <!-- Instagram Link -->
-                            <a
-                                href="https://instagram.com/proj_lighthouse"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="bg-white text-black rounded-md hover:bg-gray-200 transition duration-300 inline-flex items-center px-3 py-2 space-x-1 w-auto"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    stroke="black"
-                                    stroke-width="4"
-                                    viewBox="0 0 256 256"
-                                    class="w-5 h-5"
-                                >
-                                    <path
-                                        fill="black"
-                                        stroke="black"
-                                        stroke-width="4"
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M128,84a44,44,0,1,0,44,44A44.04978,44.04978,0,0,0,128,84Zm0,80a36,36,0,1,1,36-36A36.04061,36.04061,0,0,1,128,164ZM172,32H84A52.059,52.059,0,0,0,32,84v88a52.059,52.059,0,0,0,52,52h88a52.059,52.059,0,0,0,52-52V84A52.059,52.059,0,0,0,172,32Zm44,140a44.04978,44.04978,0,0,1-44,44H84a44.04978,44.04978,0,0,1-44-44V84A44.04978,44.04978,0,0,1,84,40h88a44.04978,44.04978,0,0,1,44,44ZM188,76a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,188,76Z"
-                                    />
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+  <!-- ===== ACTIVE ===== -->
+  <div class="w-full flex items-center my-6">
+    <hr class="flex-grow border-t-2 border-gray-300" />
+    <span class="mx-4 flex items-center text-lg font-semibold text-gray-700">
+      <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M10 19l-7-7 7-7v14z"/></svg>
+      ACTIVE
+      <svg class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="currentColor"><path d="M14 5l7 7-7 7V5z"/></svg>
+    </span>
+    <hr class="flex-grow border-t-2 border-gray-300" />
+  </div>
+
+  <div class="grid gap-8 w-full max-w-6xl lg:grid-cols-12">
+
+    <!-- HERO — The Bettering Branch -->
+    <article class="group lg:col-span-12 bg-[#F4FBE2] rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+      <div class="md:w-1/2 relative overflow-hidden">
+        <img src="/images/thebetteringbranch.png" alt="The Bettering Branch"
+             class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105" />
+      </div>
+
+      <div class="md:w-1/2 p-8 flex flex-col justify-between space-y-6">
+        <header class="space-y-2">
+          <h2 class="text-3xl font-bold text-[#60AD68]">The Bettering Branch</h2>
+          <p class="text-gray-700 font-semibold">📍 Singapore</p>
+        </header>
+
+        <p class="text-gray-700 leading-relaxed">
+          A youth-founded social-impact collective leveraging tech to “better Singapore, one branch at a time.”
+          <br><br>
+          <strong>Site features&nbsp;🚀</strong><br>
+          • Dynamic hero slideshow highlighting initiatives<br>
+          • Fully-accessible design in calming pastel green/yellow palette
+        </p>
+
+        <footer class="flex space-x-3">
+          <a href="https://thebetteringbranch.vercel.app/" target="_blank"
+             class="inline-flex items-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800">
+            <span class="mr-2">🌐</span>Website
+          </a>
+          <a href="https://www.instagram.com/thebetteringbranch/" target="_blank"
+             class="inline-flex items-center px-4 py-2 ig-gradient rounded-md ml-3">
+            <!-- Square Instagram SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.505 4.505 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.503 2.503 0 0 0 12 9.5Zm4-1a1 1 0 1 1-1-1 1 1 0 0 1 1 1Z"/>
+            </svg>
+            <span class="ml-1">Instagram</span>
+          </a>
+        </footer>
+      </div>
+    </article>
+
+    <!-- Bukit Gombak Eagles Interact -->
+    <article class="group lg:col-span-6 bg-[#E7F0FF] rounded-2xl shadow-lg overflow-hidden flex flex-col">
+      <div class="relative overflow-hidden">
+        <img src="/images/eaglesinteract.png" alt="Bukit Gombak Eagles Interact"
+             class="object-cover w-full h-64 md:h-72 transition-transform duration-300 group-hover:scale-105" />
+        <span class="absolute top-4 left-4 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow-md">
+          WORK IN PROGRESS
+        </span>
+      </div>
+      <div class="p-6 space-y-4 flex flex-col flex-grow">
+        <div>
+          <h3 class="text-2xl font-bold text-blue-700">Bukit Gombak Eagles Interact Club</h3>
+          <p class="text-gray-700 font-semibold">📍 Singapore</p>
+        </div>
+        <p class="text-gray-700 flex-grow">
+          Bukit Gombak Eagles Interact Club (BGEIC) empowers youths to serve the
+          community through flexible, ad-hoc participation in club activities.
+          The new site sports a blue-and-gold palette, an interactive calendar,
+          and <strong>modal-based project gallery</strong> to showcase each outreach effort.
+        </p>
+        <footer class="flex space-x-3">
+          <a href="https://eaglesinteract.vercel.app/" target="_blank"
+             class="inline-flex items-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800">
+            🌐 Website
+          </a>
+          <a href="https://www.instagram.com/eagles_interact/" target="_blank"
+             class="inline-flex items-center px-4 py-2 ig-gradient rounded-md ml-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.505 4.505 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.503 2.503 0 0 0 12 9.5Zm4-1a1 1 0 1 1-1-1 1 1 0 0 1 1 1Z"/>
+            </svg>
+            <span class="ml-1">Instagram</span>
+          </a>
+        </footer>
+      </div>
+    </article>
+
+    <!-- Booked for Charity -->
+    <article class="group lg:col-span-6 bg-[#FFF6E5] rounded-2xl shadow-lg overflow-hidden flex flex-col">
+      <div class="relative overflow-hidden">
+        <img src="/images/bookedforcharity.png" alt="Booked for Charity"
+             class="object-cover w-full h-64 md:h-72 transition-transform duration-300 group-hover:scale-105" />
+        <span class="absolute top-4 left-4 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow-md">
+          WORK IN PROGRESS
+        </span>
+      </div>
+      <div class="p-6 space-y-4 flex flex-col flex-grow">
+        <div>
+          <h3 class="text-2xl font-bold text-amber-600">Booked for Charity</h3>
+          <p class="text-gray-700 font-semibold">📍 United&nbsp;States</p>
+        </div>
+        <p class="text-gray-700 flex-grow">
+Founded in November 2024, the organisation aims to spark a love for reading among children, especially those with limited access to books outside school. The website features a colourful and playful theme that reflects its mission to make literature fun and accessible.
+
+        </p>
+        <footer class="flex space-x-3">
+          <a href="https://bookedforcharity.vercel.app/" target="_blank"
+             class="inline-flex items-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800">
+            🌐 Website
+          </a>
+          <a href="https://www.instagram.com/bookedforcharity/" target="_blank"
+             class="inline-flex items-center px-4 py-2 ig-gradient rounded-md ml-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.505 4.505 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.503 2.503 0 0 0 12 9.5Zm4-1a1 1 0 1 1-1-1 1 1 0 0 1 1 1Z"/>
+            </svg>
+            <span class="ml-1">Instagram</span>
+          </a>
+        </footer>
+      </div>
+    </article>
+
+    <!-- Aetheris Magazine -->
+    <article class="group lg:col-span-6 bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+      <div class="overflow-hidden">
+        <img src="/images/aetherismagazine.jpg" alt="Aetheris Magazine"
+             class="object-cover w-full h-56 md:h-64 transition-transform duration-300 group-hover:scale-105" />
+      </div>
+      <div class="p-6 space-y-3 flex flex-col flex-grow">
+        <h3 class="text-xl font-bold text-gray-900">Aetheris Magazine</h3>
+        <p class="text-gray-700 font-semibold">📍 India, United&nbsp;States</p>
+        <p class="text-gray-700 flex-grow">
+          A student-led science magazine inspiring passion in Science,
+          Technology, Engineering, and Mathematics (STEM) through accessible
+          articles and global collaborations.
+        </p>
+<footer class="flex items-center space-x-3">
+
+          <a href="https://aetherismagazine.vercel.app/" target="_blank"
+             class="inline-flex items-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800">
+            🌐 Website
+          </a>
+          <a href="https://www.instagram.com/aetherismagazine/" target="_blank"
+             class="inline-flex items-center px-4 py-2 ig-gradient rounded-md ml-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.505 4.505 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.503 2.503 0 0 0 12 9.5Zm4-1a1 1 0 1 1-1-1 1 1 0 0 1 1 1Z"/>
+            </svg>
+            <span class="ml-1">Instagram</span>
+          </a>
+        </footer>
+      </div>
+    </article>
+
+    <!-- Mind4Matter -->
+    <article class="group lg:col-span-6 bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+      <div class="overflow-hidden">
+        <img src="/images/mind4matter.jpg" alt="Mind4Matter"
+             class="object-cover w-full h-56 md:h-64 transition-transform duration-300 group-hover:scale-105" />
+      </div>
+      <div class="p-6 space-y-3 flex flex-col flex-grow">
+        <h3 class="text-xl font-bold text-gray-900">Mind4Matter</h3>
+        <p class="text-gray-700 font-semibold">📍 United&nbsp;States</p>
+        <p class="text-gray-700 flex-grow">
+          A youth-led nonprofit organisation that aims to help families facing
+          mental health issues through resources, peer stories, and community
+          initiatives.
+        </p>
+<footer class="flex items-center space-x-3">
+
+          <a href="https://mind4matter.vercel.app/" target="_blank"
+             class="inline-flex items-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800">
+            🌐 Website
+          </a>
+          <a href="https://www.instagram.com/mind4matter.global" target="_blank"
+             class="inline-flex items-center px-4 py-2 ig-gradient rounded-md ml-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.505 4.505 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.503 2.503 0 0 0 12 9.5Zm4-1a1 1 0 1 1-1-1 1 1 0 0 1 1 1Z"/>
+            </svg>
+            <span class="ml-1">Instagram</span>
+          </a>
+        </footer>
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== ARCHIVED / EXPERIMENTAL ===== -->
+  <div class="w-full flex items-center my-6">
+    <hr class="flex-grow border-t-2 border-gray-300" />
+    <span class="mx-4 flex items-center text-lg font-semibold text-gray-700">
+      <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M10 19l-7-7 7-7v14z"/></svg>
+      ARCHIVED &amp; EXPERIMENTAL
+      <svg class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="currentColor"><path d="M14 5l7 7-7 7V5z"/></svg>
+    </span>
+    <hr class="flex-grow border-t-2 border-gray-300" />
+  </div>
+
+  <div class="grid gap-8 w-full max-w-4xl md:grid-cols-2">
+
+    <!-- The Bettering Run -->
+    <article class="group bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+      <div class="overflow-hidden">
+        <img src="/images/betteringrun.jpg" alt="The Bettering Run"
+             class="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105" />
+      </div>
+      <div class="p-6 space-y-3 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold text-gray-900">The Bettering Run</h3>
+        <p class="text-gray-700 font-semibold">📍 Singapore</p>
+        <p class="text-gray-700 flex-grow">
+          A 3.5 km run in support of health &amp; sustainability, paired with a
+          post-run carnival microsite that includes a programme booklet viewer
+          and e-stamp card challenge.
+        </p>
+        <footer class="flex items-center space-x-3">
+
+          <a href="https://thebetteringrun.vercel.app/" target="_blank"
+             class="inline-flex items-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800">
+            🌐 Website
+          </a>
+        </footer>
+      </div>
+    </article>
+
+    <!-- Project Lighthouse -->
+    <article class="group bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+      <div class="overflow-hidden">
+        <img src="/images/project-lighthouse.png" alt="Project Lighthouse"
+             class="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105" />
+      </div>
+      <div class="p-6 space-y-3 flex flex-col flex-grow">
+        <h3 class="text-lg font-bold text-gray-900">Project Lighthouse</h3>
+        <p class="text-gray-700 font-semibold">📍 Singapore</p>
+        <p class="text-gray-700 flex-grow">
+          A group of ACJC students and graduates who want to shine a light into
+          the lives of residents living alone through befriending and community
+          outreach.
+        </p>
+        <footer class="flex items-center space-x-3">
+          <a href="https://projectlighthouse.vercel.app/" target="_blank"
+             class="inline-flex items-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800">
+            🌐 Website
+          </a>
+          <a href="https://instagram.com/proj_lighthouse" target="_blank"
+             class="inline-flex items-center px-4 py-2 ig-gradient rounded-md ml-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.505 4.505 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.503 2.503 0 0 0 12 9.5Zm4-1a1 1 0 1 1-1-1 1 1 0 0 1 1 1Z"/>
+            </svg>
+            <span class="ml-1">Instagram</span>
+          </a>
+        </footer>
+      </div>
+    </article>
+  </div>
+</main>
+
 
         <footer class="bg-[#e6fffe] py-10">
             <div class="container mx-auto px-4">
