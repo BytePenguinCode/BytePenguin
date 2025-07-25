@@ -263,9 +263,6 @@
       <div class="relative overflow-hidden">
         <img src="/images/bookedforcharity.png" alt="Booked for Charity"
              class="object-cover w-full h-64 md:h-72 transition-transform duration-300 group-hover:scale-105" />
-        <span class="absolute top-4 left-4 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow-md">
-          WORK IN PROGRESS
-        </span>
       </div>
       <div class="p-6 space-y-4 flex flex-col flex-grow">
         <div>
@@ -325,10 +322,16 @@ Founded in November 2024, the organisation aims to spark a love for reading amon
 
     <!-- Mind4Matter -->
     <article class="group lg:col-span-6 bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-      <div class="overflow-hidden">
-        <img src="/images/mind4matter.jpg" alt="Mind4Matter"
-             class="object-cover w-full h-56 md:h-64 transition-transform duration-300 group-hover:scale-105" />
-      </div>
+    <div class="relative overflow-hidden">
+      <img
+        src="/images/mind4matter.jpg"
+        alt="Mind4Matter"
+        class="object-cover w-full h-56 md:h-64 transition-transform duration-300 group-hover:scale-105"
+      />
+      <span class="absolute top-4 left-4 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+        WORK IN PROGRESS
+      </span>
+    </div>
       <div class="p-6 space-y-3 flex flex-col flex-grow">
         <h3 class="text-xl font-bold text-gray-900">Mind4Matter</h3>
         <p class="text-gray-700 font-semibold">📍 United&nbsp;States</p>
@@ -509,9 +512,9 @@ Founded in November 2024, the organisation aims to spark a love for reading amon
                 }
             });
 
-            let complete = 5;
+            let complete = 6;
             let queue = 3;
-            let target = 25;
+            let target = 10;
 
             const targetLabel = document.getElementById("target");
             targetLabel.innerHTML = `Target: <b>${target}</b> websites by the End of 2025`;
